@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp260926.MainPage"
+             BackgroundColor="{StaticResource OffBlack}">
+
+    <Grid RowDefinitions="*, Auto" Padding="20" RowSpacing="20">
+
+        <!-- Écran d'affichage du résultat -->
+        <VerticalStackLayout Grid.Row="0" 
+                             VerticalOptions="End" 
+                             HorizontalOptions="Fill" 
+                             Spacing="10">
+            <Label x:Name="CurrentCalculationLabel"
+                   Text=""
+                   FontSize="20"
+                   TextColor="#9E9E9E"
+                   HorizontalTextAlignment="End"
+                   FontFamily="OpenSansRegular" />
+
+            <Label x:Name="ResultLabel"
+                   Text="0"
+                   FontSize="48"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalTextAlignment="End"
+                   FontFamily="OpenSansSemibold"
+                   LineBreakMode="HeadTruncation" />
+        </VerticalStackLayout>
+
+        <!-- Grille des boutons -->
+        <Grid Grid.Row="1" 
+              RowDefinitions="Auto, Auto, Auto, Auto, Auto" 
+              ColumnDefinitions="*, *, *, *" 
+              RowSpacing="12" 
+              ColumnSpacing="12">
+
+            <!-- Ligne 1 -->
+            <Button Text="C" Grid.Row="0" Grid.Column="0" Clicked="OnClearClicked" Style="{StaticResource KeypadSecondaryBtnStyle}" />
+            <Button Text="+/-" Grid.Row="0" Grid.Column="1" Clicked="OnNegateClicked" Style="{StaticResource KeypadSecondaryBtnStyle}" />
+            <Button Text="%" Grid.Row="0" Grid.Column="2" Clicked="OnPercentageClicked" Style="{StaticResource KeypadSecondaryBtnStyle}" />
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource KeypadPrimaryBtnStyle}" />
+
+            <!-- Ligne 2 -->
+            <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="×" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource KeypadPrimaryBtnStyle}" />
+
+            <!-- Ligne 3 -->
+            <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource KeypadPrimaryBtnStyle}" />
+
+            <!-- Ligne 4 -->
+            <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="+" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource KeypadPrimaryBtnStyle}" />
+
+            <!-- Ligne 5 -->
+            <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnNumberClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="," Grid.Row="4" Grid.Column="2" Clicked="OnDecimalClicked" Style="{StaticResource KeypadNumberBtnStyle}" />
+            <Button Text="=" Grid.Row="4" Grid.Column="3" Clicked="OnEqualClicked" Style="{StaticResource KeypadPrimaryBtnStyle}" />
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

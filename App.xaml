@@ -1,0 +1,45 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp260926"
+             x:Class="MauiApp260926.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Couleurs de secours si absentes de Colors.xaml -->
+            <Color x:Key="OffBlack">#1F1F1F</Color>
+
+            <!-- Styles personnalisés de la calculatrice -->
+            <Style x:Key="KeypadPrimaryBtnStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="OpenSansSemibold" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HeightRequest" Value="65" />
+            </Style>
+
+            <Style x:Key="KeypadNumberBtnStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2B2B36" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HeightRequest" Value="65" />
+            </Style>
+
+            <Style x:Key="KeypadSecondaryBtnStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontFamily" Value="OpenSansSemibold" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HeightRequest" Value="65" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
